@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="aaaaaaaaaaaaa" />
+
+    <com.wyman.myapplication.CustomView
+        android:id="@+id/cv1"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:paddingLeft="30dp"
+        app:investAmount="5000"
+        app:progressBackgroundColor="#ebebeb"
+        app:progressDotBackgroundColor="#FBDC80"
+        app:progressDotRadius="3dp"
+        app:progressHeight="3dp"
+        app:progressProcessBackgroundColorEnd="#FE7637"
+        app:progressProcessBackgroundColorStart="#FFAE68"
+        app:progressTextColor="#FFFFFF"
+        app:progressTextSize="8sp"
+        app:progressTipImg="@mipmap/pao_progress"
+        app:progressWidth="300dp"
+        app:totalAmount="10000" />
+
+    <com.wyman.myapplication.CustomView
+        android:id="@+id/cv2"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:paddingLeft="30dp"
+        app:investAmount="0"
+        app:progressBackgroundColor="#ebebeb"
+        app:progressDotBackgroundColor="#FBDC80"
+        app:progressDotRadius="5dp"
+        app:progressHeight="5dp"
+        app:progressProcessBackgroundColorEnd="#FE7637"
+        app:progressProcessBackgroundColorStart="#FFAE68"
+        app:progressTextColor="#FFFFFF"
+        app:progressTextSize="8sp"
+        app:progressTipImg="@mipmap/pao_progress"
+        app:progressWidth="300dp"
+        app:totalAmount="10000" />
+
+    <com.wyman.myapplication.CustomView
+        android:id="@+id/cv3"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:paddingLeft="30dp"
+        app:investAmount="0"
+        app:progressBackgroundColor="#ebebeb"
+        app:progressDotBackgroundColor="#FBDC80"
+        app:progressDotRadius="5dp"
+        app:progressHeight="5dp"
+        app:progressProcessBackgroundColorEnd="#FE7637"
+        app:progressProcessBackgroundColorStart="#FFAE68"
+        app:progressTextColor="#FFFFFF"
+        app:progressTextSize="8sp"
+        app:progressTipImg="@mipmap/pao_progress"
+        app:progressWidth="300dp"
+        app:totalAmount="10000" />
+
+    <com.wyman.myapplication.CustomView
+        android:id="@+id/cv4"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:paddingLeft="30dp"
+        app:investAmount="0"
+        app:progressBackgroundColor="#ebebeb"
+        app:progressDotBackgroundColor="#FBDC80"
+        app:progressDotRadius="5dp"
+        app:progressHeight="5dp"
+        app:progressProcessBackgroundColorEnd="#FE7637"
+        app:progressProcessBackgroundColorStart="#FFAE68"
+        app:progressTextColor="#FFFFFF"
+        app:progressTextSize="8sp"
+        app:progressTipImg="@mipmap/pao_progress"
+        app:progressWidth="300dp"
+        app:totalAmount="10000" />
+
+
+</LinearLayout>
