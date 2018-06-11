@@ -1,4 +1,4 @@
-package com.wyman.myapplication.binder;
+package com.wyman.myapplication.messenger;
 
 import android.app.Service;
 import android.content.ComponentName;

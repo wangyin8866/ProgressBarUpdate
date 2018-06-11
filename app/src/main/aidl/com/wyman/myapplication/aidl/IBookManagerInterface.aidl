@@ -9,7 +9,7 @@ import com.wyman.myapplication.aidl.IOnNewBookArrivedListener;
 interface IBookManagerInterface {
 
     List<Book> getBoobList();
-    void addBook(in Book book);
+    List<Book> addBook(in Book book);
 
     void registerListener(IOnNewBookArrivedListener listener);
     void unregisterListener(IOnNewBookArrivedListener listener);

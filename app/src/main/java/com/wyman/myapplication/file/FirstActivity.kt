@@ -1,4 +1,4 @@
-package com.wyman.myapplication
+package com.wyman.myapplication.file
 
 import android.content.Intent
 import android.os.Bundle
@@ -6,11 +6,13 @@ import android.os.Environment
 import android.support.v7.app.AppCompatActivity
 import android.util.Log
 import android.widget.Button
+import com.wyman.myapplication.MyConstants
+import com.wyman.myapplication.R
+import com.wyman.myapplication.UserManager
 import com.wyman.myapplication.aidl.Book
 import java.io.File
 import java.io.FileOutputStream
 import java.io.ObjectOutputStream
-import kotlin.concurrent.thread
 
 /**
  * @author wyman

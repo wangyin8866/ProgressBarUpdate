@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.wyman.myapplication">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
     <application
@@ -19,21 +22,34 @@
             <!--</intent-filter>-->
         </activity>
 
-        <activity android:name=".FirstActivity" >
+        <activity android:name=".file.FirstActivity" >
         </activity>
-        <activity android:name=".ThirdActivity" android:process=":client">
+        <activity android:name=".messenger.ThirdActivity" android:process=":client">
 
         </activity>
-        <activity android:name=".SecondActivity" android:process="com.wyman.myapplication.remote"/>
-        <activity android:name=".BookManagerActivity" >
+        <activity android:name=".file.SecondActivity" android:process="com.wyman.myapplication.remote"/>
+        <activity android:name=".aidl.BookManagerActivity" >
+
+        </activity>
+        <activity android:name=".provider.ProviderActivity" >
+
+        </activity>
+        <activity android:name=".socket.TCPClientActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
-        <service android:name=".binder.MessengerService" android:process=":service"/>
+        <service android:name=".messenger.MessengerService" android:process=":service"/>
         <service android:name=".aidl.BookManagerService" android:process=":remote"/>
+        <service android:name=".socket.TCPServerService" android:process=":tcp"/>
+
+        <provider
+            android:authorities="com.wyman.myapplication.provider.BookProvider"
+            android:name=".provider.BookProvider"
+            android:permission="com.wyman.PROVIDER"
+            android:process=":provider"/>
     </application>
 
 </manifest>

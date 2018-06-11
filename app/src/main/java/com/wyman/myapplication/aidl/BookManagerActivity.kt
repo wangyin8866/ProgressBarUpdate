@@ -1,4 +1,4 @@
-package com.wyman.myapplication
+package com.wyman.myapplication.aidl
 
 import android.annotation.SuppressLint
 import android.content.ComponentName
@@ -11,12 +11,8 @@ import android.os.IBinder
 import android.os.Message
 import android.support.v7.app.AppCompatActivity
 import android.util.Log
-import android.view.View
 import android.widget.Button
-import com.wyman.myapplication.aidl.Book
-import com.wyman.myapplication.aidl.BookManagerService
-import com.wyman.myapplication.aidl.IBookManagerInterface
-import com.wyman.myapplication.aidl.IOnNewBookArrivedListener
+import com.wyman.myapplication.R
 
 /**
  * @author wyman
@@ -54,10 +50,10 @@ class BookManagerActivity : AppCompatActivity() {
             Log.e("BookManagerActivity", "query book list :" + list.toString())
 
             val book = Book(3, "android进阶")
-            bookManagerService.addBook(book)
-            val newList = bookManagerService.boobList
+            val newList = bookManagerService.addBook(book)
+//            val newList = bookManagerService.boobList
 
-            Log.e("BookManagerActivity", "query book list :" + newList.toString())
+            Log.e("BookManager222222", "query book list :" + newList.toString())
             bookManagerService.registerListener(mIOnNewBookArrivedListener)
         }
 
@@ -66,13 +62,14 @@ class BookManagerActivity : AppCompatActivity() {
         }
 
     }
-    private val mIOnNewBookArrivedListener=object : IOnNewBookArrivedListener.Stub() {
+    private val mIOnNewBookArrivedListener = object : IOnNewBookArrivedListener.Stub() {
         override fun onNewBookArrived(newBook: Book?) {
             mHandler.obtainMessage(MESSAGE_NEW_BOOK_ARRIVED, newBook).sendToTarget()
 
         }
 
     }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.a)

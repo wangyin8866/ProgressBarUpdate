@@ -1,4 +1,4 @@
-package com.wyman.myapplication
+package com.wyman.myapplication.messenger
 
 import android.content.ComponentName
 import android.content.Context
@@ -8,8 +8,8 @@ import android.os.*
 import android.support.v7.app.AppCompatActivity
 import android.util.Log
 import android.widget.Button
-import com.wyman.myapplication.R.id.btn
-import com.wyman.myapplication.binder.MessengerService
+import com.wyman.myapplication.R
+import com.wyman.myapplication.UserManager
 
 /**
  * @author wyman
@@ -25,7 +25,7 @@ class ThirdActivity :AppCompatActivity() {
 
     private val  mConnection=object :ServiceConnection{
         override fun onServiceDisconnected(name: ComponentName?) {
-                Log.e(ThirdActivity.TAG,name.toString())
+                Log.e(TAG,name.toString())
         }
 
         override fun onServiceConnected(name: ComponentName?, service: IBinder?) {

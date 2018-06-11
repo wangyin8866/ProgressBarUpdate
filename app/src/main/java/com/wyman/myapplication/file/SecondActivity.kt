@@ -1,15 +1,16 @@
-package com.wyman.myapplication
+package com.wyman.myapplication.file
 
-import android.content.Intent
 import android.os.Bundle
 import android.os.Environment
 import android.support.v7.app.AppCompatActivity
 import android.util.Log
 import android.widget.Button
+import com.wyman.myapplication.MyConstants
+import com.wyman.myapplication.R
+import com.wyman.myapplication.UserManager
 import java.io.File
 import java.io.FileInputStream
 import java.io.ObjectInputStream
-import kotlin.concurrent.thread
 
 /**
  * @author wyman

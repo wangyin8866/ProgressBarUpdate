@@ -5,6 +5,7 @@ import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.TextView;
 
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
@@ -14,7 +15,6 @@ import static android.view.View.LAYER_TYPE_SOFTWARE;
 
 public class MainActivity extends AppCompatActivity {
     private CustomView customView1, customView2, customView3, customView4;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,6 +32,8 @@ public class MainActivity extends AppCompatActivity {
         customView2.setData(50,100);
         customView3.setData(100,100);
         customView4.setData(10,100);
+
+
     }
 
 
