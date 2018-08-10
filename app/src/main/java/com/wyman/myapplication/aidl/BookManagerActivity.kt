@@ -88,7 +88,6 @@ class BookManagerActivity : AppCompatActivity() {
 
 
         bindService(Intent(BookManagerActivity@ this, BookManagerService::class.java), mConnection, Context.BIND_AUTO_CREATE)
-
     }
 
     override fun onDestroy() {

@@ -2,6 +2,7 @@ package com.wyman.myapplication.file
 
 import android.os.Bundle
 import android.os.Environment
+import android.support.annotation.Nullable
 import android.support.v7.app.AppCompatActivity
 import android.util.Log
 import android.widget.Button
@@ -24,7 +25,7 @@ class SecondActivity : AppCompatActivity() {
         setContentView(R.layout.binder_test)
 
         btn = findViewById(R.id.btn)
-
+@Nullable
         btn.text = "跳转到third"
         Log.e("sUserId", UserManager.sUserId.toString())
 
